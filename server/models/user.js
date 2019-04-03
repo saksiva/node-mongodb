@@ -1,25 +1,12 @@
-const mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
-const User = mongoose.model("User", {
+var User = mongoose.model('User', {
   email: {
     type: String,
-    require: true,
-    minlength: 1,
-    trim: true
+    required: true,
+    trim: true,
+    minlength: 1
   }
 });
 
-module.exports = { User };
-
-// const newUser = new User({
-//   email: " stat@nte.com "
-// });
-//
-// newUser.save().then(
-//   doc => {
-//     console.log("Saved user", doc);
-//   },
-//   e => {
-//     console.log("Unable to save user");
-//   }
-// );
+module.exports = {User}
